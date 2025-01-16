@@ -81,8 +81,8 @@ def save_plot(image: Image,  main_title: str, file_name: str, other_image: Image
     plt.savefig(f'{file_name}.png')
 
 
-image = Image("Original", "./fruits/orange_94.jpg")
-noisy_image = image.add_salt_pepper_noise(0.02, 0.02, 5)
+image = Image("./fruits/test/orange_94.jpg")
+noisy_image = image.add_salt_pepper_noise(0.02, 0.02, seed=5)
 save_plot(image.matlike, "Original", "aplica_ruido", noisy_image, "Com ruído")
 
 gaussean_image = image.gaussian(noisy_image)
